@@ -7,19 +7,28 @@ With its user-friendly and aesthetically refined interface, both beginners and c
 
 
 ## Screenshots
+Here are some glimpses of "coffee shop" app in action:
 
- 
-<img src="./screenshot/1.png" style="width: 250px;"/>
-<img src="./screenshot/2.png" style="width: 250px;"/>
-<img src="./screenshot/3.png" style="width: 250px;"/>
-<img src="./screenshot/4.png" style="width: 250px;"/>
-<img src="./screenshot/5.png" style="width: 250px;"/>
-<img src="./screenshot/6.png" style="width: 250px;"/>
-<img src="./screenshot/7.png" style="width: 250px;"/>
-<img src="./screenshot/8.png" style="width: 250px;"/>
-<img src="./screenshot/9.png" style="width: 250px;"/>
-<img src="./screenshot/10.png" style="width: 250px;"/>
-<img src="./screenshot/11.png" style="width: 250px;"/>
+| **Welcome**          | **Onboarding-1**         | **Onboarding-2** |
+|--------------------|--------------------|--------------------|
+| ![welcome](./screenshot/1.png) | ![onboarding-1](./screenshot/2.png) | ![Onboarding-2](./screenshot/3.png) |
+| test | test | test |
+
+| **Onboarding-3**          | **Create Account**         | **Sing In** |
+|--------------------|--------------------|--------------------|
+| ![Onboarding-3](./screenshot/4.png) | ![Create Account](./screenshot/5.png) | ![Sing In](./screenshot/6.png) |
+| test | test | test |
+
+| **Verify Code**          | **New Password**         | **Complete Your Profile** |
+|--------------------|--------------------|--------------------|
+| ![Verify Code](./screenshot/7.png) | ![Password](./screenshot/8.png) | ![Onboarding-2](./screenshot/9.png) |
+| test | test | test |
+
+| **Enter Location**          | **Home**         | **Complete Your Profile** |
+|--------------------|--------------------|--------------------|
+| ![Enter Location](./screenshot/10.png) | ![Home](./screenshot/11.png) | ![Onboarding-2](./screenshot/9.png) |
+| test | test | test |
+
 
 
 ## Getting Started

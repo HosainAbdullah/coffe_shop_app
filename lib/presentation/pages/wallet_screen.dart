@@ -1,7 +1,7 @@
 import 'package:coffe_shop_app/constants/size/size_config.dart';
 import 'package:coffe_shop_app/constants/theme/app_theme.dart';
 import 'package:coffe_shop_app/presentation/pages/add_money_screen.dart';
-import 'package:coffe_shop_app/presentation/widgets/buttons/button_back_app_bar.dart';
+import 'package:coffe_shop_app/core/widgets/buttons/button_back_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class WalletScreen extends StatelessWidget {

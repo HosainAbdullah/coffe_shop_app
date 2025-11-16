@@ -20,14 +20,12 @@ abstract class AppTheme {
     required AppColorsExtension colors,
     required ColorScheme colorScheme,
   }) {
-    final fontFamily = 'Inter';
+    final fontFamily = 'NotoSansArabic';
 
     return ThemeData(
-      brightness: brightness,
       fontFamily: fontFamily,
       useMaterial3: true,
-
-      // colorSchemeSeed: AppColors.primaryColor,
+      brightness: brightness,
       splashFactory: NoSplash.splashFactory,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: colors.background,
@@ -47,7 +45,54 @@ abstract class AppTheme {
           color: colors.textDefault,
         ),
       ),
-
+      inputDecorationTheme: InputDecorationTheme(
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 2,
+            // color: Colors.red,
+            color: Colors.transparent,
+          ),
+          borderRadius: BorderRadius.circular(
+            SizeConfig.defaultRadius(size: 10),
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 2, color: colors.primaryColor),
+          borderRadius: BorderRadius.circular(
+            SizeConfig.defaultRadius(size: 10),
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 2, color: colors.errorColor),
+          borderRadius: BorderRadius.circular(
+            SizeConfig.defaultRadius(size: 10),
+          ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: BorderSide(width: 2, color: colors.errorColor),
+          borderRadius: BorderRadius.circular(
+            SizeConfig.defaultRadius(size: 10),
+          ),
+        ),
+      ),
+      iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all<Color>(
+            colors.background.withAlpha(30),
+          ),
+          foregroundColor: WidgetStateProperty.all<Color>(colors.primaryColor),
+          shape: WidgetStateProperty.all<OutlinedBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                SizeConfig.defaultRadius(size: 13),
+              ),
+            ),
+          ),
+          padding: WidgetStateProperty.all<EdgeInsets>(
+            SizeConfig.defaultPadding(size: 10),
+          ),
+        ),
+      ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: colors.surface,
         selectedItemColor: colors.primaryColor,
@@ -83,11 +128,13 @@ abstract class AppTheme {
         fontSize: getFontSize(18),
         fontWeight: FontWeight.bold,
         color: textColor,
+        // fontFamily: "NotoSansArabic",
       ),
       displayMedium: TextStyle(
         fontSize: getFontSize(18),
         fontWeight: FontWeight.w500,
         color: textColor,
+        // fontFamily: "NotoSansArabic",
       ),
       displaySmall: TextStyle(
         fontSize: getFontSize(18),
