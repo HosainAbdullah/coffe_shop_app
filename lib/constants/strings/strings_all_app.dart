@@ -61,4 +61,17 @@ class StringsAllApp {
   static const String profileText = "profile";
   static const String locationText = "location";
   static const String searchText = "search";
+  static const String specialOffersText = "specialOffers";
+  static const String seeAllText = "seeAll";
+  static const String myRewardText = "myReward";
+  static const String featuredProductsText = "featuredProducts";
+
+  // reviews Screens
+  static const String reviewsText = "reviews";
+  static const String writeReviewText = "writeReview";
+  static const String searchInReviewsText = "searchInReviews";
+
+  // static const String writeYourReviewText = "writeYourReview";
+  // static const String yourRatingText = "yourRating";
+  // static const String submitText = "submit";
 }

@@ -60,6 +60,14 @@
     "chat":"الدردشة",
     "profile":"الملف الشخصي",
     "location":"الموقع",
-    "search":"البحث"
+    "search":"البحث",
+    "specialOffers":"عروض خاصة",
+    "seeAll":"اظهار الكل",
+    "myReward":"مكافأتي",
+    "featuredProducts":"المنتجات المميزة",
+    "reviews":"التقييمات",
+    "writeReview":"كتابة التقييم",
+    "searchInReviews":"ابحث في التقييمات"
+    
 
 }

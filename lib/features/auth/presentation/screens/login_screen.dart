@@ -1,3 +1,5 @@
+import 'package:coffe_shop_app/constants/path_const/assets_list.dart';
+import 'package:coffe_shop_app/constants/path_const/local_path.dart';
 import 'package:coffe_shop_app/constants/size/size_config.dart';
 import 'package:coffe_shop_app/constants/strings/strings_all_app.dart';
 import 'package:coffe_shop_app/constants/theme/app_theme.dart';
@@ -143,11 +145,17 @@ class LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SocialMediaButton(icon: Icons.apple, onTap: () {}),
-                      SizedBox(width: getScreenWidth(16)),
-                      SocialMediaButton(icon: Icons.g_mobiledata, onTap: () {}),
-                      SizedBox(width: getScreenWidth(16)),
-                      SocialMediaButton(icon: Icons.facebook, onTap: () {}),
+                      SocialMediaButton(
+                        iconName:
+                            AssetsPath.assetsIcons + AssetsListName.icons[0],
+                        onPressed: () {},
+                      ),
+                      SizedBox(width: getScreenWidth(10)),
+                      SocialMediaButton(
+                        iconName:
+                            AssetsPath.assetsIcons + AssetsListName.icons[1],
+                        onPressed: () {},
+                      ),
                     ],
                   ),
 

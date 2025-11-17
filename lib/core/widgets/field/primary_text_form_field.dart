@@ -10,6 +10,9 @@ class PrimaryTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final bool obscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
+  final int? maxLines;
+  final EdgeInsetsGeometry? contentPadding;
 
   const PrimaryTextFormField({
     super.key,
@@ -20,6 +23,9 @@ class PrimaryTextFormField extends StatelessWidget {
     this.validator,
     this.obscureText = false,
     this.suffixIcon,
+    this.prefixIcon,
+    this.maxLines,
+    this.contentPadding,
   });
 
   @override
@@ -27,9 +33,10 @@ class PrimaryTextFormField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
+      maxLines: maxLines ?? 1,
 
       decoration: InputDecoration(
-        contentPadding: SizeConfig.horizontalPadding(),
+        contentPadding: contentPadding ?? SizeConfig.horizontalPadding(),
         hintText: hintText,
 
         hintStyle: Theme.of(
@@ -38,6 +45,7 @@ class PrimaryTextFormField extends StatelessWidget {
         filled: true,
         fillColor: context.colors.surfaceSecondary,
         suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
       ),
       cursorHeight: getFontSize(20),
       cursorColor: context.colors.primaryColor,

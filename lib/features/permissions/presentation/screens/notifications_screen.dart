@@ -63,6 +63,7 @@ class NotificationsScreen extends StatelessWidget {
               // Option to Enter Location Manually
               SecondaryButtonApp(
                 text: StringsAllApp.maybeLaterText.tr(context),
+                onPressed: () {},
               ),
             ],
           ),

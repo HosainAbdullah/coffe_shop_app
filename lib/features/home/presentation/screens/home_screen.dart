@@ -3,6 +3,7 @@ import 'package:coffe_shop_app/constants/size/size_config.dart';
 import 'package:coffe_shop_app/constants/strings/strings_all_app.dart';
 import 'package:coffe_shop_app/constants/theme/app_theme.dart';
 import 'package:coffe_shop_app/core/lang/app_localizations.dart';
+import 'package:coffe_shop_app/features/home/presentation/widgets/banner_offer_card.dart';
 import 'package:coffe_shop_app/features/product/presentation/screens/product_details_screen.dart';
 import 'package:coffe_shop_app/presentation/pages/wishlist_screen.dart';
 import 'package:coffe_shop_app/core/widgets/padding_horizontal.dart';
@@ -99,10 +100,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Special Offers",
+                    StringsAllApp.specialOffersText.tr(context),
                     style: Theme.of(context).textTheme.displayLarge,
                   ),
-
                   TextButton(
                     style: ElevatedButton.styleFrom(
                       foregroundColor: context.colors.primaryColor,
@@ -111,11 +111,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         getScreenWidth(80),
                         getScreenHeight(25),
                       ),
-                      alignment: Alignment.centerLeft,
+                      // alignment: Alignment.c,
                     ),
                     onPressed: () {},
                     child: Text(
-                      "See All",
+                      StringsAllApp.seeAllText.tr(context),
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
                         color: context.colors.primaryColor,
                       ),
@@ -126,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(
               width: double.infinity,
-              height: 160,
+              height: getScreenHeight(160),
               child: CarouselSlider(
                 options: CarouselOptions(
                   initialPage: 0,
@@ -135,19 +135,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   enlargeCenterPage: true,
                   enlargeFactor: 0.3,
                   viewportFraction: 1,
-                  // height: MediaQuery.of(context).size.height * 0.2,
-                  // enableInfiniteScroll: true,
                   onPageChanged: (index, _) {
                     setState(() {
                       _currentPage = index;
                     });
                   },
                 ),
-                // disableGesture: true,
-                items: List.generate(5, (index) => const BannerOfferCard()),
+                items: List.generate(
+                  5,
+                  (index) => BannerOfferCard(
+                    typeOffer: "العروض اليومية",
+                    description: "احصل على عرض خاص لك",
+                    sizeOffer: '20%',
+                    image:
+                        "https://images.pexels.com/photos/14879927/pexels-photo-14879927.jpeg",
+                  ),
+                ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: getScreenHeight(10)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -172,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // My Reward Section
             PaddingHorizontal(
               child: Text(
-                "My Reward (3/4)",
+                "${StringsAllApp.myRewardText.tr(context)} (3/4)",
                 style: Theme.of(context).textTheme.displayLarge,
               ),
             ),
@@ -192,11 +198,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _buildRewardCircle("Cup 1", true),
-                    _buildRewardCircle("Cup 2", true),
-                    _buildRewardCircle("Cup 3", true),
-                    _buildRewardCircle("Cup 4", false),
-                    _buildRewardCircle("Free", false),
+                    _buildRewardCircle("الكوب 1", true),
+                    _buildRewardCircle("الكوب 2", true),
+                    _buildRewardCircle("الكوب 3", true),
+                    _buildRewardCircle("الكوب 4", false),
+                    _buildRewardCircle("مجاني", false),
                   ],
                 ),
               ),
@@ -210,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Featured Products",
+                    StringsAllApp.featuredProductsText.tr(context),
                     style: Theme.of(context).textTheme.displayLarge,
                   ),
 
@@ -225,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     onPressed: () {},
                     child: Text(
-                      "See All",
+                      StringsAllApp.seeAllText.tr(context),
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
                         color: context.colors.primaryColor,
                       ),
@@ -442,123 +448,3 @@ class AppBarHomeScreen extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(60);
 }
-
-class BannerOfferCard extends StatelessWidget {
-  const BannerOfferCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return PaddingHorizontal(
-      child: Container(
-        height: getScreenHeight(150),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(
-            SizeConfig.defaultRadius(size: 8),
-          ),
-          color: context.colors.surfaceSecondary,
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Padding(
-                padding: SizeConfig.defaultPadding(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: SizeConfig.defaultPadding(size: 5),
-                      decoration: BoxDecoration(
-                        color: context.colors.background,
-                        borderRadius: BorderRadius.circular(
-                          SizeConfig.defaultRadius(size: 20),
-                        ),
-                      ),
-                      child: Text(
-                        "Today's Offers",
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: getFontSize(8),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: getScreenHeight(2)),
-                    Text(
-                      "Get Special Offer",
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    SizedBox(height: getScreenHeight(5)),
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        style: Theme.of(context).textTheme.labelLarge,
-                        children: [
-                          TextSpan(text: 'Up to '),
-                          TextSpan(
-                            text: ' 20%',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF0C544C),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: context.colors.primaryColor,
-                        padding: EdgeInsets.zero,
-                        minimumSize: Size(
-                          getScreenWidth(120),
-                          getScreenHeight(30),
-                        ),
-                      ),
-                      child: Text(
-                        "Order Now",
-                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          color: context.colors.background,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.elliptical(60, 80),
-                bottomLeft: Radius.elliptical(60, 80),
-                topRight: Radius.circular(SizeConfig.defaultRadius(size: 8)),
-                bottomRight: Radius.circular(SizeConfig.defaultRadius(size: 8)),
-              ),
-              child: Image.network(
-                "https://images.pexels.com/photos/14879927/pexels-photo-14879927.jpeg",
-                width: getScreenWidth(170),
-                height: getScreenHeight(150),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-// class TopHalfCircleClipper extends CustomClipper<RRect> {
-//   @override
-//   RRect getClip(Size size) {
-//     // هنا نحدد منطقة القص كـ زاوية مستديرة (RRect)
-//     return RRect.fromRectAndRadius(
-//       Rect.fromLTRB(size.width, 0, 0, size.height),
-//       //  fromLTWH(0, 0, size.width, size.height),
-//       const Radius.elliptical(20, 80), // زوايا مستديرة
-//     );
-//   }
-
-//   @override
-//   bool shouldReclip(covariant CustomClipper<RRect> oldClipper) {
-//     return false;
-//   }
-// }

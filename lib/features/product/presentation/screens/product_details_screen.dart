@@ -4,9 +4,8 @@ import 'package:coffe_shop_app/core/widgets/buttons/button_back_app_bar.dart';
 import 'package:coffe_shop_app/core/widgets/buttons/circle_button_widget.dart';
 import 'package:coffe_shop_app/core/widgets/custem_cached_network_image.dart';
 import 'package:coffe_shop_app/core/widgets/padding_horizontal.dart';
-import 'package:coffe_shop_app/presentation/pages/cart_screen.dart';
-import 'package:coffe_shop_app/presentation/pages/review_screen.dart';
-import 'package:coffe_shop_app/presentation/pages/reviews_screen.dart';
+import 'package:coffe_shop_app/features/cart/presentation/screens/cart_screen.dart';
+import 'package:coffe_shop_app/features/reviews/presentation/screens/reviews_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsScreen extends StatelessWidget {

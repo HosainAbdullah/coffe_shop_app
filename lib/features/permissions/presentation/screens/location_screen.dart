@@ -63,6 +63,7 @@ class LocationScreen extends StatelessWidget {
               // Option to Enter Location Manually
               SecondaryButtonApp(
                 text: StringsAllApp.enterLocationManuallyText.tr(context),
+                onPressed: () {},
               ),
             ],
           ),

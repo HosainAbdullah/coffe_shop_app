@@ -60,5 +60,12 @@
     "chat": "Chat",
     "profile": "Profile",
     "location": "Location",
-    "search": "Search"
+    "search": "Search",
+    "specialOffers": "Special Offers",
+    "seeAll": "See All",
+    "myReward": "My Reward",
+    "featuredProducts": "Featured Products",
+    "reviews": "Reviews",
+    "writeReview": "Write Review",
+    "searchInReviews": "Search In Reviews"
 }

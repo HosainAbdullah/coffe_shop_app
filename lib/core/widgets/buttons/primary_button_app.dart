@@ -7,12 +7,14 @@ class PrimaryButtonApp extends StatelessWidget {
   final String text;
   final double? width;
   final double? height;
+  final Widget? child;
   const PrimaryButtonApp({
     super.key,
     required this.text,
     required this.onPressed,
     this.width,
     this.height,
+    this.child,
   });
 
   @override
@@ -22,6 +24,7 @@ class PrimaryButtonApp extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: context.colors.primaryColor,
         foregroundColor: context.colors.secondaryColor,
+        padding: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             SizeConfig.defaultRadius(size: 8),
@@ -32,12 +35,14 @@ class PrimaryButtonApp extends StatelessWidget {
           getScreenHeight(height ?? 55),
         ),
       ),
-      child: Text(
-        text,
-        style: Theme.of(
-          context,
-        ).textTheme.headlineMedium?.copyWith(color: context.colors.background),
-      ),
+      child:
+          child ??
+          Text(
+            text,
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+              color: context.colors.background,
+            ),
+          ),
     );
   }
 }
