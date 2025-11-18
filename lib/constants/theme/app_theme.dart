@@ -93,6 +93,20 @@ abstract class AppTheme {
           ),
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all<Color>(colors.background),
+          // side: WidgetStateProperty.all<BorderSide>(
+          //   BorderSide(color: colors., width: 1.5),
+          // ),
+          overlayColor: WidgetStateProperty.all<Color>(colors.bgPrimaryColor),
+          padding: WidgetStateProperty.all<EdgeInsets>(
+            // SizeConfig.defaultPadding(size: 10),
+            EdgeInsets.zero,
+          ),
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        ),
+      ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: colors.surface,
         selectedItemColor: colors.primaryColor,

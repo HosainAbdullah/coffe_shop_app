@@ -1,5 +1,5 @@
 class AssetsListName {
-  static const images = ["welcome.png", "logo-app-img.jpg", "logo-app.svg"];
+  static const images = ["welcome.png", "barcode.png"];
 
   static const icons = ["facebook-icon.svg", "google-icon.svg"];
 

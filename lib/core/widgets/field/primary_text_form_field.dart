@@ -13,6 +13,8 @@ class PrimaryTextFormField extends StatelessWidget {
   final Widget? prefixIcon;
   final int? maxLines;
   final EdgeInsetsGeometry? contentPadding;
+  final String? initialValue;
+  final void Function(String)? onChanged;
 
   const PrimaryTextFormField({
     super.key,
@@ -26,15 +28,18 @@ class PrimaryTextFormField extends StatelessWidget {
     this.prefixIcon,
     this.maxLines,
     this.contentPadding,
+    this.initialValue,
+    this.onChanged,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: initialValue,
       controller: controller,
       obscureText: obscureText,
       maxLines: maxLines ?? 1,
-
+      onChanged: onChanged,
       decoration: InputDecoration(
         contentPadding: contentPadding ?? SizeConfig.horizontalPadding(),
         hintText: hintText,

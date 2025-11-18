@@ -5,7 +5,7 @@ import 'package:coffe_shop_app/constants/theme/app_theme.dart';
 import 'package:coffe_shop_app/core/lang/app_localizations.dart';
 import 'package:coffe_shop_app/features/home/presentation/widgets/banner_offer_card.dart';
 import 'package:coffe_shop_app/features/product/presentation/screens/product_details_screen.dart';
-import 'package:coffe_shop_app/presentation/pages/wishlist_screen.dart';
+import 'package:coffe_shop_app/features/settings/presentation/screens/wishlist_screen.dart';
 import 'package:coffe_shop_app/core/widgets/padding_horizontal.dart';
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,7 @@
 import 'package:coffe_shop_app/constants/size/size_config.dart';
 import 'package:coffe_shop_app/constants/theme/app_theme.dart';
-import 'package:coffe_shop_app/presentation/pages/add_money_screen.dart';
+import 'package:coffe_shop_app/core/widgets/buttons/primary_button_app.dart';
+import 'package:coffe_shop_app/features/payment/presentation/screens/add_money_screen.dart';
 import 'package:coffe_shop_app/core/widgets/buttons/button_back_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,9 @@ class WalletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('Wallet', style: Theme.of(context).textTheme.titleMedium),
         leading: ButtonBackAppBar(),
+        centerTitle: true,
+        title: AppBarTitle(title: 'Wallet'),
       ),
       body: Padding(
         padding: SizeConfig.horizontalPadding(),
@@ -34,7 +35,7 @@ class WalletScreen extends StatelessWidget {
             ),
 
             // Transactions list
-            SizedBox(height: 24),
+            SizedBox(height: getScreenHeight(24)),
             Text('Today', style: Theme.of(context).textTheme.titleMedium),
             SizedBox(height: getScreenHeight(5)),
             TransactionItem(
@@ -140,23 +141,7 @@ class WalletBalanceCard extends StatelessWidget {
               ],
             ),
             SizedBox(height: getScreenHeight(16)),
-            ElevatedButton(
-              onPressed: onAddMoneyPressed,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: context.colors.primaryColor,
-                foregroundColor: context.colors.secondaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                minimumSize: Size(MediaQuery.of(context).size.width, 55),
-              ),
-              child: Text(
-                'Add Money',
-                style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                  color: context.colors.background,
-                ),
-              ),
-            ),
+            PrimaryButtonApp(text: "Add Money", onPressed: onAddMoneyPressed),
           ],
         ),
       ),

@@ -1,8 +1,8 @@
 import 'package:coffe_shop_app/constants/size/size_config.dart';
 import 'package:coffe_shop_app/constants/theme/app_theme.dart';
 import 'package:coffe_shop_app/features/profile/presentation/screens/profile_edit_screen.dart';
-import 'package:coffe_shop_app/presentation/pages/coupon_screen.dart';
-import 'package:coffe_shop_app/presentation/pages/wallet_screen.dart';
+import 'package:coffe_shop_app/features/settings/presentation/screens/coupon_screen.dart';
+import 'package:coffe_shop_app/features/payment/presentation/screens/wallet_screen.dart';
 import 'package:coffe_shop_app/core/widgets/buttons/button_back_app_bar.dart';
 import 'package:coffe_shop_app/core/widgets/custem_cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,8 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Profile', style: Theme.of(context).textTheme.titleMedium),
-        leading: ButtonBackAppBar(),
+        // leading: ButtonBackAppBar(),
+        automaticallyImplyLeading: false,
       ),
       body: ListView(
         padding: EdgeInsets.all(16),

@@ -3,7 +3,7 @@ import 'package:coffe_shop_app/core/lang/app_localizations.dart';
 import 'package:coffe_shop_app/features/home/presentation/controller/main_provider.dart';
 import 'package:coffe_shop_app/features/home/presentation/screens/home_screen.dart';
 import 'package:coffe_shop_app/features/profile/presentation/screens/profile_screen.dart';
-import 'package:coffe_shop_app/presentation/pages/wishlist_screen.dart';
+import 'package:coffe_shop_app/features/settings/presentation/screens/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

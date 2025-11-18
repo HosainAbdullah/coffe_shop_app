@@ -12,22 +12,43 @@ Here are some glimpses of "coffee shop" app in action:
 | **Welcome**          | **Onboarding-1**         | **Onboarding-2** |
 |--------------------|--------------------|--------------------|
 | ![welcome](./screenshot/1.png) | ![onboarding-1](./screenshot/2.png) | ![Onboarding-2](./screenshot/3.png) |
-| test | test | test |
+
 
 | **Onboarding-3**          | **Create Account**         | **Sing In** |
 |--------------------|--------------------|--------------------|
 | ![Onboarding-3](./screenshot/4.png) | ![Create Account](./screenshot/5.png) | ![Sing In](./screenshot/6.png) |
-| test | test | test |
+
 
 | **Verify Code**          | **New Password**         | **Complete Your Profile** |
 |--------------------|--------------------|--------------------|
 | ![Verify Code](./screenshot/7.png) | ![Password](./screenshot/8.png) | ![Onboarding-2](./screenshot/9.png) |
-| test | test | test |
 
-| **Enter Location**          | **Home**         | **Complete Your Profile** |
+
+| **Allow Location Access**          | **Allow Notifications Access**         | **Enter Location** |
 |--------------------|--------------------|--------------------|
-| ![Enter Location](./screenshot/10.png) | ![Home](./screenshot/11.png) | ![Onboarding-2](./screenshot/9.png) |
-| test | test | test |
+| ![Enter Location](./screenshot/10.png) | ![Home](./screenshot/11.png) | ![Onboarding-2](./screenshot/12.png) |
+
+
+| **Home**          | **Wishlist**         | **Profile** |
+|--------------------|--------------------|--------------------|
+| ![Home](./screenshot/13.png) | ![Wishlist](./screenshot/14.png) | ![Profile](./screenshot/15.png) |
+<!-- | test | test | test | -->
+
+| **Coupon**          | **Wallet**         | **Add Card** |
+|--------------------|--------------------|--------------------|
+| ![Coupon](./screenshot/16.png) | ![Wallet](./screenshot/18.png) | ![Add Card](./screenshot/19.png) |
+<!-- | test | test | test | -->
+
+| **Successfully**          | **Dateils Product**         | **My Cart** |
+|--------------------|--------------------|--------------------|
+| ![Successfully](./screenshot/20.png) | ![Dateils Product](./screenshot/21.png) | ![My Cart](./screenshot/22.png) |
+<!-- | test | test | test | -->
+
+| **Write Review**          | **Reviews**         | **Test** |
+|--------------------|--------------------|--------------------|
+| ![Write Review](./screenshot/23.png) | ![Reviews](./screenshot/24.png) | ![Profile](./screenshot/24.png) |
+<!-- | test | test | test | -->
+
 
 
 

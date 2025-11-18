@@ -1,6 +1,8 @@
 import 'package:coffe_shop_app/constants/size/size_config.dart';
 import 'package:coffe_shop_app/constants/theme/app_theme.dart';
-import 'package:coffe_shop_app/presentation/pages/successful_screen.dart';
+import 'package:coffe_shop_app/core/widgets/buttons/primary_button_app.dart';
+import 'package:coffe_shop_app/core/widgets/field/primary_text_form_field.dart';
+import 'package:coffe_shop_app/features/payment/presentation/screens/successful_screen.dart';
 import 'package:coffe_shop_app/core/widgets/buttons/button_back_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -11,15 +13,12 @@ class AddMoneyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'Add Money',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
         leading: ButtonBackAppBar(),
+        centerTitle: true,
+        title: AppBarTitle(title: 'Add Money'),
       ),
       body: Padding(
-        padding: SizeConfig.horizontalPadding(),
+        padding: SizeConfig.defaultPadding(),
         child: ListView(
           children: [
             // Wallet balance card
@@ -52,8 +51,8 @@ class AddMoneyScreen extends StatelessWidget {
                           ],
                         ),
                         Container(
-                          height: 40,
-                          width: 40,
+                          height: getScreenHeight(40),
+                          width: getScreenWidth(40),
                           decoration: BoxDecoration(
                             color: context.colors.background,
                             borderRadius: BorderRadius.circular(8),
@@ -81,24 +80,10 @@ class AddMoneyScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: getScreenHeight(16)),
-                    TextFormField(
-                      // controller: _nameController,
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(horizontal: 15),
-                        hintText: 'Enter Amount',
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        hintStyle: Theme.of(context).textTheme.labelMedium,
-                        // border: InputBorder.none,
-                        filled: true,
-                        fillColor: context.colors.background,
-                      ),
-                      cursorHeight: 25,
-                      cursorColor: context.colors.primaryColor,
-                      keyboardType: TextInputType.number,
-                      textInputAction: TextInputAction.done,
+                    PrimaryTextFormField(
+                      hintText: 'Enter Amount',
+                      controller: TextEditingController(),
+                      prefixIcon: Icon(Icons.attach_money_rounded),
                       validator: (value) {
                         if (value!.isEmpty) {
                           return 'Please enter your name';
@@ -107,9 +92,9 @@ class AddMoneyScreen extends StatelessWidget {
                       },
                     ),
                     SizedBox(height: getScreenHeight(16)),
-                    ElevatedButton(
+                    PrimaryButtonApp(
+                      text: "Add Money",
                       onPressed: () {
-                        // SuccessfulScreen
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -117,22 +102,6 @@ class AddMoneyScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: context.colors.primaryColor,
-                        foregroundColor: context.colors.secondaryColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        minimumSize: Size(
-                          MediaQuery.of(context).size.width,
-                          55,
-                        ),
-                      ),
-                      child: Text(
-                        'Add Money',
-                        style: Theme.of(context).textTheme.displayMedium
-                            ?.copyWith(color: context.colors.background),
-                      ),
                     ),
                   ],
                 ),

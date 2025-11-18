@@ -15,11 +15,9 @@ class WishlistScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
-            'Wishlist',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          leading: ButtonBackAppBar(),
+          title: AppBarTitle(title: 'Wishlist'),
+          automaticallyImplyLeading: false,
+          // leading: ButtonBackAppBar(),
           bottom: TabBar(
             padding: SizeConfig.horizontalPadding(),
             dividerColor: context.colors.borderDefault,
